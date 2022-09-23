@@ -1,4 +1,5 @@
 import 'package:doctor_booking_app/models/dokter_model.dart';
+import 'package:doctor_booking_app/pages/detail_page.dart';
 import 'package:doctor_booking_app/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -7,14 +8,19 @@ class DokterCard extends StatelessWidget {
   final DokterModel? dokter;
   final formatter = NumberFormat.currency(locale: 'id', symbol: 'Rp ');
 
-  DokterCard(
-    this.dokter);
+  DokterCard(this.dokter);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-   
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DetailPage(
+                    dokter: dokter,
+                  )),
+        );
       },
       child: Container(
         width: 215,
@@ -37,7 +43,6 @@ class DokterCard extends StatelessWidget {
                     fit: BoxFit.cover,
                     image: AssetImage(dokter!.imageUrl ?? "No Data"),
                     // image: AssetImage('image_doctor2.jpg'),
-
                   ),
                 ),
               ),
@@ -51,7 +56,7 @@ class DokterCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          dokter!.name  ?? "No Data",
+                          dokter!.name ?? "No Data",
                           style: blackTextStyle.copyWith(
                             fontWeight: medium,
                             fontSize: 18,
@@ -62,7 +67,7 @@ class DokterCard extends StatelessWidget {
                           height: 3,
                         ),
                         Text(
-                           formatter.format(dokter!.price).toString()  ,
+                          formatter.format(dokter!.price).toString(),
                           style: greyTextStyle.copyWith(
                             fontWeight: light,
                             fontSize: 14,
@@ -106,7 +111,7 @@ class DokterCard extends StatelessWidget {
                     ),
                     Text(
                       // formatter.format(dokter!.rating).toString() ,
-                     dokter!.rating.toString() ,
+                      dokter!.rating.toString(),
 
                       style: blackTextStyle.copyWith(
                         fontWeight: medium,

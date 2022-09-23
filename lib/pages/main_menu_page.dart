@@ -46,7 +46,7 @@ class _MenuPageState extends State<MenuPage> {
     },
     {
       "id": 5,
-      "name": "dr. Citra Sp.BF",
+      "name": "dr. Indah Sp.U",
       "spesialis": "Spesialis Bedah Saraf",
       "imageUrl": 'assets/image_doctor5.jpg',
       "rating": 4.5.toDouble(),
@@ -289,8 +289,7 @@ class _MenuPageState extends State<MenuPage> {
               children: doktor
                   .map(
                     (doktor) => DokterCard(doktor),
-                  )
-                  .toList(),
+                  ).toList(),
             ),
           ],
         ),

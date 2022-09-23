@@ -1,4 +1,5 @@
 import 'package:doctor_booking_app/models/dokter_model.dart';
+import 'package:doctor_booking_app/pages/detail_page.dart';
 import 'package:doctor_booking_app/shared/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -12,7 +13,13 @@ class DokterTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-
+    Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => DetailPage(
+                    dokter: dokter,
+                  )),
+        );
       },
       child: Container(
         margin: EdgeInsets.only(
