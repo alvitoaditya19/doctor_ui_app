@@ -1,16 +1,3 @@
-# doctor_booking_app
+# Doctor APP UI With Flutter Code
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Desktop - 1 (6)](https://user-images.githubusercontent.com/88970775/191912654-9a40263b-0801-499a-90a6-45aa4912d512.png)
